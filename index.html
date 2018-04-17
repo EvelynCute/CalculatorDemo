@@ -3,7 +3,8 @@
   <head>
    <title>计算器示例</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/layout.css"/>
+    <script type="text/javascript" src="./js/calculator.js"></script>
   </head>
   <body>
     <div id="container">
@@ -34,46 +35,47 @@
             </div>
 
             <form>
-              <input class="input" type="text" name="number" placeholder="0.">
+              <input id="output" class="input" type="text" name="number" value ="0">
+
             </form>
           
             <div class="leftbox">
               <div class="top-button ">
                 <div class="content"></div>
               </div>
-              <div class="button hover-style">MC</div>
-              <div class="button hover-style">MR</div>
-              <div class="button hover-style">MS</div>
-              <div class="button hover-style">M+</div>
+              <div class="button hover-style" onclick="get()">MC</div>
+              <div class="button hover-style" onclick="get()">MR</div>
+              <div class="button hover-style" onclick="get()">MS</div>
+              <div class="button hover-style" onclick="get()">M+</div>
             </div>
             <div class="rightbox">
-              <div class="top-button hover-style">Backspace</div>
-              <div class="top-button hover-style">CE</div>
-              <div class="top-button hover-style">C</div>
+              <div class="top-button hover-style" onclick="get()">Backspace</div>
+              <div class="top-button hover-style" onclick="clearOneText()">CE</div>
+              <div class="top-button hover-style" onclick="clearText()">C</div>
               <div class="nav"></div>
-              <div class="button hover-style">7</div>
-              <div class="button hover-style">8</div>
-              <div class="button hover-style">9</div>
-              <div class="operator-but hover-style">/</div>    
-              <div class="button hover-style">sqrt</div>
+              <div class="button hover-style" onclick="get(7)">7</div>
+              <div class="button hover-style" onclick="get(8)">8</div>
+              <div class="button hover-style" onclick="get(9)">9</div>
+              <div class="operator-but hover-style" onclick="get('/')">/</div>    
+              <div class="button hover-style" onclick="get()">sqrt</div>
               <div class="nav"></div>
-              <div class="button hover-style">4</div>
-              <div class="button hover-style">5</div>
-              <div class="button hover-style">6</div>
-              <div class="operator-but hover-style">*</div>    
-              <div class="button hover-style">%</div>
+              <div class="button hover-style" onclick="get(4)">4</div>
+              <div class="button hover-style" onclick="get(5)">5</div>
+              <div class="button hover-style" onclick="get(6)">6</div>
+              <div class="operator-but hover-style" onclick="get('*')">*</div>    
+              <div class="button hover-style" onclick="get()">%</div>
               <div class="nav"></div>
-              <div class="button hover-style">1</div>
-              <div class="button hover-style">2</div>
-              <div class="button hover-style">3</div>
-              <div class="operator-but hover-style">-</div>    
-              <div class="button hover-style">1/x</div>
+              <div class="button hover-style" onclick="get(1)">1</div>
+              <div class="button hover-style" onclick="get(2)">2</div>
+              <div class="button hover-style" onclick="get(3)">3</div>
+              <div class="operator-but hover-style" onclick="get('-')">-</div>    
+              <div class="button hover-style" onclick="get()">1/x</div>
               <div class="nav"></div>
-              <div class="button hover-style">0</div>
-              <div class="button hover-style">+/-</div>
-              <div class="button hover-style">.</div>
-              <div class="operator-but hover-style">+</div>    
-              <div class="operator-but hover-style">=</div>
+              <div class="button hover-style" onclick="get(0)">0</div>
+              <div class="button hover-style" onclick="get()">+/-</div>
+              <div class="button hover-style" onclick="get('.')">.</div>
+              <div class="operator-but hover-style" onclick="get('+')">+</div>    
+              <div class="operator-but hover-style" onclick="eq()">=</div>
               <div class="nav"></div>
             </div>
           </div>
