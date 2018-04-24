@@ -11,6 +11,7 @@ function get(key){
 		str = str+key;
 	}else{
 		str = key;
+		mark=false;
 	}
 	
 
